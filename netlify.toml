@@ -1,5 +1,6 @@
 [build]
-command = "go build -tags netlify,osusergo,netgo -ldflags=-extldflags=-static -o netlify/functions/all ."
+# Use -static if it becomes a thing. https://github.com/golang/go/issues/26492
+command = "go build -tags netlify,osusergo,netgo -o netlify/functions/all ."
 
 [build.environment]
 GO_VERSION = "1.24.1"
