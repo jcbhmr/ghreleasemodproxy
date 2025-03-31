@@ -1,0 +1,10 @@
+[build]
+command = "go build -o netlify/functions/all -tags netlify ."
+
+[build.environment]
+GO_IMPORT_PATH = "github.com/jcbhmr/goghr.jcbhmr.com"
+
+[[redirects]]
+from = "/*"
+to = "/.netlify/functions/all/:splat"
+status = 200
