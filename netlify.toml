@@ -1,5 +1,6 @@
 [build]
-# Use -static if it becomes a thing. https://github.com/golang/go/issues/26492
+# TODO: Build on amazonlinux to match glibc etc.
+# https://github.com/golang/go/issues/26492
 command = "go build -tags netlify,osusergo,netgo -o netlify/functions/all ."
 
 [build.environment]
