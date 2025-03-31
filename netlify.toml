@@ -1,5 +1,9 @@
 [build]
-command = "go build -o netlify/functions/all -tags netlify ."
+command = """
+CC='zig cc' \
+CXX='zig c++' \
+go build -tags netlify,osusergo,netgo -ldflags=-extldflags=-static -o netlify/functions/all .
+"""
 
 [build.environment]
 GO_VERSION = "1.24.1"
