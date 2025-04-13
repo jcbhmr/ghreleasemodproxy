@@ -1,4 +1,4 @@
-module github.com/jcbhmr/goghr.jcbhmr.com
+module github.com/jcbhmr/ghreleasemodproxy
 
 go 1.24.1
 

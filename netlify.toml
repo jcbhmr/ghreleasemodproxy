@@ -1,11 +1,10 @@
 [build]
 # TODO: Build on amazonlinux to match glibc etc.
 # https://github.com/golang/go/issues/26492
-command = "go build -tags netlify,osusergo,netgo -o netlify/functions/all ."
+command = "go build -tags lambda,netgo -o netlify/functions/all ./cmd/ghreleasemodproxy"
 
 [build.environment]
 GO_VERSION = "1.24.1"
-GO_IMPORT_PATH = "github.com/jcbhmr/goghr.jcbhmr.com"
 
 [[redirects]]
 from = "/*"
