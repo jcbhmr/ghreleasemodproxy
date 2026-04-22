@@ -1,0 +1,14 @@
+{
+  "tasks": {
+    "dev": "deno serve --allow-all --watch --reload ./main.ts"
+  },
+  "imports": {
+    "@elysiajs/cors": "npm:@elysiajs/cors@^1.4.1",
+    "@elysiajs/static": "npm:@elysiajs/static@^1.4.9",
+    "@zip.js/zip.js": "npm:@zip.js/zip.js@^2.8.26",
+    "elysia": "npm:elysia@^1.4.28",
+    "octokit": "npm:octokit@^5.0.5",
+    "type-fest": "npm:type-fest@^5.6.0",
+    "zod": "npm:zod@^4.3.6"
+  }
+}

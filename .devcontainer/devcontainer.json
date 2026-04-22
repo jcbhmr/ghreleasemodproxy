@@ -1,3 +1,18 @@
 {
-  "image": "mcr.microsoft.com/devcontainers/go"
+  "image": "mcr.microsoft.com/devcontainers/base:debian",
+  "features": {
+    "ghcr.io/devcontainers/features/go": {},
+    "ghcr.io/devcontainers/features/rust": {}
+  },
+  "updateContentCommand": "./.devcontainer/updateContentCommand.sh",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "denoland.vscode-deno",
+        "tinygo.vscode-tinygo",
+        "golang.go",
+        "BytecodeAlliance.wit-idl"
+      ]
+    }
+  }
 }
