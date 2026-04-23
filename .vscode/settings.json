@@ -1,9 +1,3 @@
 {
     "deno.enable": true,
-    "go.toolsEnvVars": {
-        "GOOS": "linux",
-        "GOARCH": "arm",
-        "GOROOT": "/home/vscode/.cache/tinygo/goroot-28469457ea3496745f44b45640eb0ff165089f4e4de592c305e2282754e6426e",
-        "GOFLAGS": "-tags=tinygo.wasm,wasip2,tinygo,purego,osusergo,math_big_pure_go,gc.precise,scheduler.asyncify,serial.none,tinygo.unicore"
-    }
 }

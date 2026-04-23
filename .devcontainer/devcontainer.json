@@ -1,17 +1,10 @@
 {
   "image": "mcr.microsoft.com/devcontainers/base:debian",
-  "features": {
-    "ghcr.io/devcontainers/features/go": {},
-    "ghcr.io/devcontainers/features/rust": {}
-  },
-  "updateContentCommand": "./.devcontainer/updateContentCommand.sh",
+  "updateContentCommand": "curl -fsSL https://deno.land/install.sh | sh -s -- --yes",
   "customizations": {
     "vscode": {
       "extensions": [
-        "denoland.vscode-deno",
-        "tinygo.vscode-tinygo",
-        "golang.go",
-        "BytecodeAlliance.wit-idl"
+        "denoland.vscode-deno"
       ]
     }
   }

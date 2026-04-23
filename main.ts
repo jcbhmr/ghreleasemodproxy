@@ -1,12 +1,15 @@
 #!/usr/bin/env -S deno serve --allow-all
-import { Elysia } from "elysia"
-import { staticPlugin } from "@elysiajs/static"
-import createApp from "./index.ts";
+import App from "./mod.ts";
 
-const app = new Elysia()
-  .use(staticPlugin())
-  .mount("/", createApp({
-    allowedModulePrefixes: ["go.jcbhmr.com/", "github.com/jcbhmr/"]
-  }).fetch)
+const app = new App({
+    allowedModules: [
+        /^github\.com\/jcbhmr\//,
+        /^([a-z0-9.]+\.)?jcbhmr\.com\//,
+    ]
+})
 
-export default app satisfies Deno.ServeDefaultExport;
+export default {
+    fetch(request: Request): Promise<Response> {
+        return app.fetch(request);
+    }
+} satisfies Deno.ServeDefaultExport
