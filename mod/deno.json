@@ -1,0 +1,7 @@
+{
+    "imports": {
+        "@std/testing": "jsr:@std/testing@^1.0.18",
+        "array-shuffle": "npm:array-shuffle@^4.1.0",
+        "type-fest": "npm:type-fest@^5.6.0"
+    }
+}
